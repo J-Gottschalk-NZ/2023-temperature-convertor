@@ -40,15 +40,18 @@ class DisplayHelp:
         # disable help button
         partner.to_help_button.config(state=DISABLED)
 
-        # If users press cross at top, closes help and 'releases' help button
-        self.help_box.protocol('WM_DELETE_WINDOW', partial(self.close_help,
-                                                           partner))
+        # If users press cross at top, closes help and
+        # 'releases' help button
+        self.help_box.protocol('WM_DELETE_WINDOW',
+                               partial(self.close_help,partner))
 
-        self.help_frame = Frame(self.help_box, width=300, height=200,
+        self.help_frame = Frame(self.help_box, width=300,
+                                height=200,
                                 bg=background)
         self.help_frame.grid()
 
-        self.help_heading_label = Label(self.help_frame, bg=background,
+        self.help_heading_label = Label(self.help_frame,
+                                        bg=background,
                                         text="Help / Info",
                                         font=("Arial", "14", "bold"))
         self.help_heading_label.grid(row=0)
@@ -74,7 +77,8 @@ class DisplayHelp:
                                      font=("Arial", "12", "bold"),
                                      text="Dismiss", bg="#CC6600",
                                      fg="#FFFFFF",
-                                     command=partial(self.close_help, partner))
+                                     command=partial(self.close_help,
+                                                     partner))
         self.dismiss_button.grid(row=2, padx=10, pady=10)
 
 
