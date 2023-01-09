@@ -34,7 +34,7 @@ class Converter:
                        "it from centigrade to Fahrenheit."
         self.temp_instructions = Label(self.temp_frame,
                                        text=instructions,
-                                       wrap=250, width=40,
+                                       wraplength=250, width=40,
                                        justify="left")
         self.temp_instructions.grid(row=1)
 
