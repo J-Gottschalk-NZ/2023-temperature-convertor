@@ -45,7 +45,8 @@ class HistoryExport:
         # If users press cross at top, closes help and
         # 'releases' help button
         self.history_box.protocol('WM_DELETE_WINDOW',
-                                  partial(self.close_history, partner))
+                                  partial(self.close_history,
+                                          partner))
 
         self.history_frame = Frame(self.history_box, width=300,
                                    height=200
