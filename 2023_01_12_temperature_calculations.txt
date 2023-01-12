@@ -1,0 +1,12 @@
+**** Temperature Calculations ****
+
+Generated: 12/01/2023
+
+Here is your calculation history (oldest to newest)...
+
+-273 C° is -459 F°
+-459 F° is -273 C°
+10 F° is -12 C°
+20 F° is -7 C°
+30 F° is -1 C°
+
