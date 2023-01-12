@@ -93,7 +93,7 @@ class HistoryExport:
         num_calcs = len(calc_list)
 
         if num_calcs > max_calcs:
-            calc_background = "#FFE6CC"     # peach
+            calc_background = "#FFE6CC"  # peach
             showing_all = "Here are your recent calculations " \
                           "({}/{} calculations shown).  Please export" \
                           " your " \
@@ -101,7 +101,7 @@ class HistoryExport:
                           "history".format(max_calcs, num_calcs)
 
         else:
-            calc_background = "#B4FACB"     # pale green
+            calc_background = "#B4FACB"  # pale green
             showing_all = "Below is your calculation history."
 
         # History text and label
@@ -139,11 +139,13 @@ class HistoryExport:
                                     bg="#ffffff", width=25)
         self.filename_entry.grid(row=4, padx=10, pady=10)
 
-        self.filename_error_label = Label(self.history_frame,
-                                          text="",
-                                          fg="#9C0000", wraplength=300,
-                                          font=("Arial", "12", "bold"))
-        self.filename_error_label.grid(row=5)
+        self.filename_feedback_label = Label(self.history_frame,
+                                             text="",
+                                             fg="#9C0000",
+                                             wraplength=300,
+                                             font=("Arial", "12",
+                                                   "bold"))
+        self.filename_feedback_label.grid(row=5)
 
         self.button_frame = Frame(self.history_frame)
         self.button_frame.grid(row=6)
@@ -213,13 +215,13 @@ class HistoryExport:
             success = "Success! Your calculation history has " \
                       "been saved as {}".format(filename)
             self.var_filename.set(filename)
-            self.filename_error_label.config(text=success,
-                                             fg="dark green")
+            self.filename_feedback_label.config(text=success,
+                                                fg="dark green")
             self.filename_entry.config(bg="#FFFFFF")
 
         else:
-            self.filename_error_label.config(text=filename_ok,
-                                             fg="dark red")
+            self.filename_feedback_label.config(text=filename_ok,
+                                                fg="dark red")
             self.filename_entry.config(bg="#F8CECC")
 
     # retrieves date and creates YYYY_MM_DD string
